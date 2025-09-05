@@ -1,0 +1,15 @@
+C:\Programmering2\Bibliotek\bin\Debug\net9.0\Bibliotek.exe
+C:\Programmering2\Bibliotek\bin\Debug\net9.0\Bibliotek.deps.json
+C:\Programmering2\Bibliotek\bin\Debug\net9.0\Bibliotek.runtimeconfig.json
+C:\Programmering2\Bibliotek\bin\Debug\net9.0\Bibliotek.dll
+C:\Programmering2\Bibliotek\bin\Debug\net9.0\Bibliotek.pdb
+C:\Programmering2\Bibliotek\obj\Debug\net9.0\Bibliotek.GeneratedMSBuildEditorConfig.editorconfig
+C:\Programmering2\Bibliotek\obj\Debug\net9.0\Bibliotek.AssemblyInfoInputs.cache
+C:\Programmering2\Bibliotek\obj\Debug\net9.0\Bibliotek.AssemblyInfo.cs
+C:\Programmering2\Bibliotek\obj\Debug\net9.0\Bibliotek.csproj.CoreCompileInputs.cache
+C:\Programmering2\Bibliotek\obj\Debug\net9.0\Bibliotek.sourcelink.json
+C:\Programmering2\Bibliotek\obj\Debug\net9.0\Bibliotek.dll
+C:\Programmering2\Bibliotek\obj\Debug\net9.0\refint\Bibliotek.dll
+C:\Programmering2\Bibliotek\obj\Debug\net9.0\Bibliotek.pdb
+C:\Programmering2\Bibliotek\obj\Debug\net9.0\Bibliotek.genruntimeconfig.cache
+C:\Programmering2\Bibliotek\obj\Debug\net9.0\ref\Bibliotek.dll
