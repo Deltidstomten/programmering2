@@ -122,10 +122,11 @@ class Program
 
     public static void listBooks()
     {
+        Console.WriteLine("{0,-10} {1,-10} {2,-10} {3, -10} {4, -10}", "Namn", "Skriven av", "Släppt", "Genre", "Fiktion");
         foreach (Book book in bookList)
         {
-            Console.WriteLine("{0,-10} {1,-10} {2,-10} {3, -10} {4, -10}", "Namn", "Skriven av", "Släppt", "Genre", "Fiktion");  
-            Console.WriteLine("{0,-10} {1,-10} {2,-10} {3, -10} {4, -10}", book.Name, book.Author, book.Year, book.Genre, book.IsFiction);  
+            Console.WriteLine("{0,-10} {1,-10} {2,-10} {3, -10} {4, -10}", book.Name, book.Author, book.Year, book.Genre, book.IsFiction);
         }
+        
     }
 }
