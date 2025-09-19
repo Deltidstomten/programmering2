@@ -2,7 +2,7 @@ namespace Pokemon;
 
 class Move
 {
-    public int PP
+    public int Pp
     { get; set; }
     public Type Type
     { get; set; }
@@ -14,4 +14,13 @@ class Move
 
     public int Acc
     { get; set; }
+
+    public Move(int newPp, Type newType, int newAtkPower, int newSelfAttack, int newAcc)
+    {
+        Pp = newPp;
+        Type = newType;
+        AtkPower = newAtkPower;
+        SelfAttack = newSelfAttack;
+        Acc = newAcc;
+    }
 }
