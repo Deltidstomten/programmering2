@@ -2,6 +2,8 @@ namespace Pokemon;
 
 class Move
 {
+    public string Name
+    { get; set; }
     public int Pp
     { get; set; }
     public Type Type
@@ -15,12 +17,16 @@ class Move
     public int Acc
     { get; set; }
 
-    public Move(int newPp, Type newType, int newAtkPower, int newSelfAttack, int newAcc)
+    public Move(string newName, int newPp, Type newType, int newAtkPower, int newSelfAttack, int newAcc)
     {
+        Name = newName;
         Pp = newPp;
         Type = newType;
         AtkPower = newAtkPower;
         SelfAttack = newSelfAttack;
         Acc = newAcc;
     }
+
+    public static Move spitt = new Move("Spitt", 1, Type.Bug, 1, 0, 1);
+
 }
