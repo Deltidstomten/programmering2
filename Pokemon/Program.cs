@@ -4,9 +4,15 @@ class Program
 {
     static void Main(string[] args)
     {
-        Pokemon pokemon = new Pokemon("TalonFlame", Type.Fire, Ability.FlameBody, [Move.spitt], 78, 81, 74, 71, 69, 126);
+        Pokemon poke1 = Pokemon.talonFlame;
+        Pokemon poke2 = (Pokemon)Pokemon.talonFlame.Clone();
+        poke2.Name = "Hassan";
+        poke2.Moves.Add(Move.spitt);
+        Console.WriteLine(poke1.Name);
+        Console.WriteLine(poke2.Name);
 
-        Console.WriteLine(pokemon.Name);
+        Console.WriteLine(poke1.Moves.Count);
+        Console.WriteLine(poke2.Moves.Count);
 
     }
 }
