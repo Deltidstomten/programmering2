@@ -3,6 +3,8 @@ namespace Pokemon;
 class Pokemon
 {
 
+    public static Pokemon talonFlame = new Pokemon("TalonFlame", Type.Fire, Ability.FlameBody, [Move.braveBird], 78, 81, 74, 71, 69, 126);
+
     public string Name
     { get; set; }
     public Type Type
@@ -46,8 +48,6 @@ class Pokemon
         SpDef = newSpDef;
         Speed = newSpeed;
     }
-    public static Pokemon talonFlame = new Pokemon("TalonFlame", Type.Fire, Ability.FlameBody, [Move.braveBird], 78, 81, 74, 71, 69, 126);
-
     public object Clone()
     {
         return new Pokemon(

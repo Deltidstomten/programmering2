@@ -4,6 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+
         Pokemon poke1 = Pokemon.talonFlame;
         Pokemon poke2 = (Pokemon)Pokemon.talonFlame.Clone();
         poke2.Name = "Hassan";
@@ -14,5 +16,7 @@ class Program
         Console.WriteLine(poke1.Moves.Count);
         Console.WriteLine(poke2.Moves.Count);
 
+
+        Combat.Battle(Trainer.Harald, Trainer.Harald);
     }
 }

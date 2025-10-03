@@ -1,4 +1,5 @@
 namespace Pokemon;
+
 enum Type
 {
     Normal,
@@ -20,3 +21,4 @@ enum Type
     Steel,
     Fairy
 }
+
