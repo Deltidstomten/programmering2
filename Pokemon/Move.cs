@@ -2,6 +2,9 @@ namespace Pokemon;
 
 class Move
 {
+    public static Move spitt = new Move("Spitt", 1, Type.Bug, 1, 0, 1);
+    public static Move braveBird = new Move("Brave Bird", 15, Type.Flying, 120, 40, 100);
+
     public string Name
     { get; set; }
     public int Pp
@@ -27,7 +30,5 @@ class Move
         Acc = newAcc;
     }
 
-    public static Move spitt = new Move("Spitt", 1, Type.Bug, 1, 0, 1);
-    public static Move braveBird = new Move("Brave Bird", 15, Type.Flying, 120, 40, 100);
-
+   
 }

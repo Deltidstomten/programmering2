@@ -15,7 +15,7 @@
     - eleverna har möjligheten att välja vad som fokuseras
 
 ## E-sport
-    - Spela spel (visa exempel)
+    - Spela spel (visa exempel) CS, Valorant, Marvel Rivals, League
     - Utvecklar spelförmåga samt sammarbetsförmåga
     - Esport teori
     - Inte bara spel även ergonomi samt gymkort
