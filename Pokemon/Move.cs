@@ -2,8 +2,19 @@ namespace Pokemon;
 
 class Move
 {
-    public static Move spitt = new Move("Spitt", 1, Type.Bug, 1, 0, 1);
-    public static Move braveBird = new Move("Brave Bird", 15, Type.Flying, 120, 40, 100);
+    public static Move spitt = new Move("Spitt", 1, Type.Bug, 1, 0, 1, true);
+    public static Move braveBird = new Move("Brave Bird", 15, Type.Flying, 120, 40, 100, false);
+
+    public Move(string name, int pp, Type type, int atkPower, int selfAttack, int acc, bool isSpecial)
+    {
+        Name = name;
+        Pp = pp;
+        Type = type;
+        AtkPower = atkPower;
+        SelfAttack = selfAttack;
+        Acc = acc;
+        IsSpecial = isSpecial;
+    }
 
     public string Name
     { get; set; }
@@ -20,15 +31,6 @@ class Move
     public int Acc
     { get; set; }
 
-    public Move(string newName, int newPp, Type newType, int newAtkPower, int newSelfAttack, int newAcc)
-    {
-        Name = newName;
-        Pp = newPp;
-        Type = newType;
-        AtkPower = newAtkPower;
-        SelfAttack = newSelfAttack;
-        Acc = newAcc;
-    }
-
-   
+    public bool IsSpecial
+    { get; set; }
 }

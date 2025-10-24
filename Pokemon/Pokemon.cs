@@ -48,6 +48,20 @@ class Pokemon
         SpDef = newSpDef;
         Speed = newSpeed;
     }
+
+    public bool IsDead()
+    {
+        if (Hp <= 0)
+        {
+            return true;
+            
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     public object Clone()
     {
         return new Pokemon(

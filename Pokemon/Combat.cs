@@ -2,7 +2,6 @@ namespace Pokemon;
 
 class Combat
 {
-    //Random random = new Random();
 
     public static void Battle(Trainer player, Trainer opponent, bool isEncounter = false)
     {
@@ -12,11 +11,14 @@ class Combat
         Pokemon playerPokemon = player.Team[0];
         Pokemon opponentPokemon = opponent.Team[0];
 
-        Move playerPokemonMove;
-        Move opponentPokemonMove;
+        Random random = new();
+
 
         while (true)
         {
+            Move playerPokemonMove;
+            Move opponentPokemonMove;
+
             Console.WriteLine("What do you want to do?");
             Console.WriteLine("1. Fight");
             Console.WriteLine("2. Change Pokemon");
@@ -43,16 +45,49 @@ class Combat
 
             if (opponentChoice == "1")
             {
-                
+                int randInt = random.Next(opponentPokemon.Moves.Count);
+                opponentPokemonMove = opponentPokemon.Moves[randInt];
             }
 
             if (playerChoice == "1" && opponentChoice == "1")
             {
+                if (playerPokemon.Speed > opponentPokemon.Speed)
+                {
 
+                }
+                else
+                {
+
+                }
             }
 
 
         }
+    }
+
+    public static double CalculateDamage(Pokemon attacker, Pokemon defender, Move move)
+    {
+        double damage = 0;
+
+        if (move.IsSpecial)
+        {
+            damage = move.AtkPower * (attacker.SpAtk / defender.SpDef);
+        }
+        else
+        {
+            damage = move.AtkPower * (attacker.Atk / defender.Def);
+        }
+        
+        damage /= 20;
+
+        if (attacker.Type == move.Type)
+        {
+            damage *= 1.5;
+        }
+
+        damage *= effectivenessChart[(int)move.Type, (int)defender.Type];
+
+        return damage;
     }
 
     public static readonly double[,] effectivenessChart = new double[18, 18]
