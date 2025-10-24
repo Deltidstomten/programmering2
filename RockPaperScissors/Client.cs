@@ -14,14 +14,21 @@ class Client
 
         NetworkStream stream = client.GetStream();
 
-
+        Console.WriteLine("Uppkoppling lyckad");
+        Console.WriteLine("Välkommen till Sten/Sax/Påse");
         while (true)
         {
-            string message = Console.ReadLine();
+            Console.WriteLine("Vad Väljer du?");
+            string message = Console.ReadLine() ?? "Error";
             byte[] data = Encoding.UTF8.GetBytes(message);
 
             stream.Write(data, 0, data.Length);
             Console.WriteLine("Skickade Ett meddelande till servern");
+
+            byte[] buffer = new byte[1024];
+            int bytesRead = stream.Read(buffer, 0, buffer.Length);
+            string status = Encoding.UTF8.GetString(buffer, 0, bytesRead);
+            Console.WriteLine(status);
 
         }
 

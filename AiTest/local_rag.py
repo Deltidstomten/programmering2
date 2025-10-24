@@ -2,9 +2,11 @@ import ollama
 import chromadb
 from chromadb.utils import embedding_functions
 from pathlib import Path
+import time
 
 EMBEDDING_MODEL = "nomic-embed-text"
 CHAT_MODEL = "gemma3"
+#CHAT_MODEL = "deepseek-r1:1.5b"
 PROMPT = "Du är en hjälpsam assistent som jobbar på storsjö (Storsjögymnasiet). Här är relevant information plockat från Storsjögymnasiet:"
 
 # === 1. Initiera ChromaDB (lokal databas)
@@ -41,18 +43,22 @@ def search(query):
 
 # === 5. Ställ en fråga till Llama3 baserat på träffarna
 def ask(question):
+    start_time = time.time()
     relevant_docs = search(question)
+    context_time = time.time() - start_time
     context = "\n\n".join(relevant_docs)
     prompt = f"{PROMPT}\n{context}\n\nFråga: {question}"
     answer = ollama.chat(model=CHAT_MODEL, messages=[{"role": "user", "content": prompt}])
+    answer_time = time.time() - start_time
     print("\n=== SVAR ===")
+    print(f"Tid att söka efter svar: {context_time:.2f}s")
+    print(f"Tid att generera ett svar: {answer_time:.1f}s")
     print(answer["message"]["content"])
 
 # === Körflöde ===
 if __name__ == "__main__":
     texts = load_texts_from_folder("data")
-    embed_and_store(texts)
-    
+    embed_and_store(texts) 
     while True:
         q = input("\nStäll en fråga (eller 'q' för att avsluta): ")
         if q.lower() == "q":

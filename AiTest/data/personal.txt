@@ -1,25 +1,5 @@
-
-Hoppa till innehållet
-Storsjögymnasiet
-
-    Elevinformation
-    Inför gymnasievalet
-    Program
-    Om skolan
-    Kontakt
-    Slå på/av webbplatssökning
-
 Personallista
 Vår personal
-
-Vid frågor eller funderingar nås vi på telefon. Om inget tel nr anges, ring expedition 063-554 11 74 alt skicka e-post.(fornamn.efternamn@storsjogymnasiet.se)
-Skolledning
-Camilla Karlsson
-Rektor
-
-063-554 11 61
-Margita Toftén
-Biträdande Rektor, fb-teori, bf-kurser
 
 063-554 11 62
 Programlag- Estet
@@ -100,16 +80,6 @@ mentor sa24, bf24, ee24, fr24, FR23
 Markus Sundberg
 Historia, religion
 
-Programlag - Teknik
-Björn Martinsson
-teknik, gymnasiearbete
-
-Elias Sjöling Njord
-Programmering, gränssnittsdesign,
-
-Magnus Oredsson
-matematik
-
 Programlag - Samhälle
 Erica Skogen
 förstelärare, Psk, kommunikation, sociologi, engelska
@@ -173,22 +143,6 @@ Specialpedagog
 Helena Eriksson
 Föräldraledig ht25
 
-Huvudkontor
-Alee Farrohi
-Huvudman, delägare
-Kommunikationschef
-
-Anders Lindh
-Huvudman, delägare
-VD
-
-Pecka Marklund
-Huvudman, delägare
-Skolchef
-
-Ingrid Sahlin
-Ekonom/Controller
-
 Hitta Hit
 
 Storsjögymnasiet
@@ -197,22 +151,6 @@ Kaserngatan 13
 
 063-554 11 74
 info@storsjogymnasiet.se
-Nyttiga Länkar
-
-Schoolsoft
-Office365
-MIUN
-Skolverket
-CSN
-Gymnasieantagningen
-Nyheter
-_
-
-    Öppet hus på Storsjögymnasiet 21-23 oktober
-    Anmälan till dansworkshop
-    Provträna med JFA – 6 okt kl 9-11
-    Skolstart ht-25
-    Sommarlov!
 
 Om Honesta
 
