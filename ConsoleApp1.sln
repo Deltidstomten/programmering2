@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon", "Pokemon\Pokemon.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockPaperScissors", "RockPaperScissors\RockPaperScissors.csproj", "{54415157-3230-464F-9A5C-D27197555B66}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatRoom", "ChatRoom\ChatRoom.csproj", "{79C57BF8-FA20-4B27-B231-2A7CA2DCEA90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +99,18 @@ Global
 		{54415157-3230-464F-9A5C-D27197555B66}.Release|x64.Build.0 = Release|Any CPU
 		{54415157-3230-464F-9A5C-D27197555B66}.Release|x86.ActiveCfg = Release|Any CPU
 		{54415157-3230-464F-9A5C-D27197555B66}.Release|x86.Build.0 = Release|Any CPU
+		{79C57BF8-FA20-4B27-B231-2A7CA2DCEA90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79C57BF8-FA20-4B27-B231-2A7CA2DCEA90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79C57BF8-FA20-4B27-B231-2A7CA2DCEA90}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{79C57BF8-FA20-4B27-B231-2A7CA2DCEA90}.Debug|x64.Build.0 = Debug|Any CPU
+		{79C57BF8-FA20-4B27-B231-2A7CA2DCEA90}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{79C57BF8-FA20-4B27-B231-2A7CA2DCEA90}.Debug|x86.Build.0 = Debug|Any CPU
+		{79C57BF8-FA20-4B27-B231-2A7CA2DCEA90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79C57BF8-FA20-4B27-B231-2A7CA2DCEA90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79C57BF8-FA20-4B27-B231-2A7CA2DCEA90}.Release|x64.ActiveCfg = Release|Any CPU
+		{79C57BF8-FA20-4B27-B231-2A7CA2DCEA90}.Release|x64.Build.0 = Release|Any CPU
+		{79C57BF8-FA20-4B27-B231-2A7CA2DCEA90}.Release|x86.ActiveCfg = Release|Any CPU
+		{79C57BF8-FA20-4B27-B231-2A7CA2DCEA90}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
