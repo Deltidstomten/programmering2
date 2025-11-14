@@ -26,6 +26,20 @@ class Server
         }
     }
 
+    private static void BroadcastMessage(string message, NetworkStream sender)
+    {
+        lock (_lock)
+        {
+            foreach (NetworkStream stream in streams)
+            {
+                if (stream == sender) { continue; }
+
+                byte[] data = Encoding.UTF8.GetBytes(message);
+                stream.Write(data, 0, data.Length);
+            }
+        }
+    }
+
     private static void ListenForMessages()
     {
         byte[] buffer = new byte[1024];
@@ -43,6 +57,7 @@ class Server
                     string message = Encoding.UTF8.GetString(buffer, 0, bytesRead);
 
                     Console.WriteLine($"Tog emot meddelandet: {message}");
+                    BroadcastMessage(message, stream);
                 }
             }
         }
