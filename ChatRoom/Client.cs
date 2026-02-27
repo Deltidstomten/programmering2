@@ -1,5 +1,6 @@
 using System.Net.Sockets;
 using System.Text;
+using System.Text.Json;
 
 namespace ChatRoom;
 
@@ -7,10 +8,16 @@ class Client
 {
     const int PORT = 4000;
 
-    static List<string> messages = [];
+    static List<Packet> packets = [];
 
     public static void StartClient(string ipAddress = "127.0.0.1")
     {
+        Console.WriteLine("Enter Your Name");
+        string input = Console.ReadLine() ?? "Harald";
+
+        string username = input;
+
+
         TcpClient client = new TcpClient(ipAddress, PORT);
         NetworkStream stream = client.GetStream();
         Console.WriteLine("Uppkoppling lyckad");
@@ -21,11 +28,14 @@ class Client
         while (true)
         {
             string message = Console.ReadLine() ?? "";
-            byte[] data = Encoding.UTF8.GetBytes(message);
+
+            Packet packet = new Packet(message, username, DateTime.Now);
+            string json = JsonSerializer.Serialize(packet);
+            byte[] data = Encoding.UTF8.GetBytes(json);
 
             stream.Write(data, 0, data.Length);
-            messages.Add(message);
-
+            packets.Add(packet);
+            UpdateTerminal();
         }
     }
 
@@ -36,9 +46,24 @@ class Client
         while (true)
         {
             int bytesRead = stream.Read(buffer, 0, buffer.Length);
-            string message = Encoding.UTF8.GetString(buffer, 0, bytesRead);
+            string json = Encoding.UTF8.GetString(buffer, 0, bytesRead);
 
-            messages.Add(message);
+            if (json.TrimStart().StartsWith('['))
+            {
+                List<Packet> temp = JsonSerializer.Deserialize<List<Packet>>(json) ?? [];
+                packets.AddRange(temp);
+                
+            } else
+            {
+                Packet? packet = JsonSerializer.Deserialize<Packet>(json);
+
+                if (packet is null)
+                {
+                    continue;
+                }
+                packets.Add(packet);
+            }
+            
             UpdateTerminal();
         }
     }
@@ -47,9 +72,9 @@ class Client
     {
         Console.Clear();
     
-        for (int i = 0; i < messages.Count; i++)
+        for (int i = 0; i < packets.Count; i++)
         {
-            Console.WriteLine(messages[i]);
+            Console.WriteLine(packets[i].ToString());
         }
 
         Console.Write("Skriv ett meddelande: ");
